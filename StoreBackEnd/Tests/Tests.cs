@@ -18,16 +18,19 @@ public class StoreTest
     public void CreateCustomerName()
     {
         Customer customer = new Customer();
-        customer.Name = "Brandon";
+        customer.set = "Brandon";
         Assert.Equal("Brandon", customer.Name);
     }
 
-    [Fact]
-    public void CreateCustomerNameNotVoid()
+    [Theory]
+    [InlineData("")]
+    [InlineData(null)]
+    [InlineData("         ")]
+    public void CreateCustomerNameNotVoid(string input)
     {
         Customer customer = new Customer();
 
-        Assert.Throws<ValidationException>(() => customer.Name = "");
+        Assert.Throws<ValidationException>(() => customer.set = "");
     }
 
 
