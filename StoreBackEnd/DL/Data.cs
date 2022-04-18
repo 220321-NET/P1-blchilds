@@ -111,10 +111,8 @@ public class Data : IData
     {
         using SqlConnection connection = new SqlConnection(_connectionString);
         connection.Open();
-
-        SqlCommand cmd = new SqlCommand("SELECT * FROM Product", connection);
         
-        cmd = new SqlCommand("UPDATE Product SET Quantity = @IUpdate WHERE ProductId = @id", connection);
+        SqlCommand cmd = new SqlCommand("UPDATE Product SET Quantity = @IUpdate WHERE ProductId = @id", connection);
 
         cmd.Parameters.AddWithValue("@IUpdate", value.Amount);
         cmd.Parameters.AddWithValue("@id", value.Id);
@@ -166,7 +164,7 @@ public class Data : IData
         connection.Close();
     }
 
-    public async Task<List<Cart>> GetOrderHistoryAsync(int customer) 
+    public async Task<List<Cart>> GetOrderHistoryAsync(int value) 
     {
         // initializing variables
         List<Cart> orderHistory = new List<Cart>();
@@ -175,7 +173,7 @@ public class Data : IData
 
         // grabs a list of all the carts the customer has purchased
         SqlCommand cmd = new SqlCommand("SELECT * FROM Cart WHERE CustomerID = @Id", connection);
-        cmd.Parameters.AddWithValue("@Id", customer);
+        cmd.Parameters.AddWithValue("@Id", value);
         cmd.ExecuteScalar();
 
         // loops through all the carts purchased by the customer, grabs the total cost of each and prints them to console. count is being used to keep count of the number of carts.

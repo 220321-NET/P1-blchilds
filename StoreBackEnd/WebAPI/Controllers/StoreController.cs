@@ -19,9 +19,7 @@ namespace WebAPI.Controllers
         [HttpGet("{userName}")]
         public async Task<Customer> GetCustomerAsync(string userName)
         {
-            Customer customer = new Customer();
-
-            customer = await _bl.FindCustomerAsync(userName);
+            Customer customer = await _bl.FindCustomerAsync(userName);
             return customer;
         }
 
@@ -52,13 +50,9 @@ namespace WebAPI.Controllers
         [HttpPost("PlaceOrder")]
         public async Task PostOrderAsync(Tuple<Cart, Customer, int> OrderToBePlaced)
         {
-            Cart cart = new Cart();
-            Customer customer = new Customer();
-            int cost;
-
-            cart = OrderToBePlaced.Item1;
-            customer = OrderToBePlaced.Item2;
-            cost = OrderToBePlaced.Item3;
+            Cart cart = OrderToBePlaced.Item1;
+            Customer customer = OrderToBePlaced.Item2;
+            int cost = OrderToBePlaced.Item3;
 
             await _bl.PlaceOrderAsync(cart, customer, cost);
         }
@@ -67,47 +61,6 @@ namespace WebAPI.Controllers
         public async Task PutInventoryAsync(Product product)
         {
             await _bl.SetDatabaseInventoryAsync(product);
-        }
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        // DELETE api/<StoreController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
         }
     }
 }
