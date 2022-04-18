@@ -18,7 +18,7 @@ public class StoreTest
     public void CreateCustomerName()
     {
         Customer customer = new Customer();
-        customer.set = "Brandon";
+        customer.Name = "Brandon";
         Assert.Equal("Brandon", customer.Name);
     }
 
@@ -30,7 +30,7 @@ public class StoreTest
     {
         Customer customer = new Customer();
 
-        Assert.Throws<ValidationException>(() => customer.set = "");
+        Assert.Throws<ValidationException>(() => customer.Name = input);
     }
 
 
