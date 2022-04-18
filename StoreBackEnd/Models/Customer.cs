@@ -5,7 +5,6 @@ public class Customer : CommonData
 {
     public Customer() {}
     private string name = "";
-    private string password = "";
     public string Name 
     { 
         get => name; 
