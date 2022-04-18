@@ -1,3 +1,5 @@
+name: CI
+
 #These are the events that this workflow will be triggered for
 on:
   push:
