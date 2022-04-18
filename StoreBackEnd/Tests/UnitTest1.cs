@@ -3,13 +3,21 @@ using Models;
 
 namespace Tests;
 
-public class UnitTest1
+public class StoreTest
 {
     [Fact]
-    public void CreateCustomerTest()
+    public void CreateCustomerIDTest()
     {
         Customer customer = new Customer();
         customer.Id = 1;
         Assert.Equal("Customer ID", customer.Id);
     }
+
+    [Fact]
+    public void CreateCustomerDateTime()
+    {
+        Customer customer = new Customer();
+        customer.DateCreated = DateTime.Now;
+        Assert.Equal("Date Created", customer.DateCreated);
+    } 
 }
