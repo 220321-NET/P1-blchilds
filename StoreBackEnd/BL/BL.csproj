@@ -2,7 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Models\Models.csproj" />
-    <ProjectReference Include="..\dl\DL.csproj" />
+    <ProjectReference Include="..\DL\DL.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

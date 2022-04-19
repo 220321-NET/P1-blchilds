@@ -1,4 +1,5 @@
 namespace BL;
+using DL;
 
 public interface IStoreBL
 {

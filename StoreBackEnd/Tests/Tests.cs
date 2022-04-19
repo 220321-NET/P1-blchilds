@@ -32,6 +32,4 @@ public class StoreTest
 
         Assert.Throws<ValidationException>(() => customer.Name = input);
     }
-
-
 }
