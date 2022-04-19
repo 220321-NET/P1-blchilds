@@ -1,5 +1,5 @@
 # docker build . -t blchilds55/store:0.0.1
-# docker run -d -p 5000:5000 blchilds55/store:0.0.1
+# docker run -d -p 5000:80 blchilds55/store:0.0.1
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 
 WORKDIR /app
