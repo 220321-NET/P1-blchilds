@@ -1,4 +1,4 @@
-### Store App ###
+### Store Application V2.0 ###
 P1 Brandon
 
 ### Overview ###
