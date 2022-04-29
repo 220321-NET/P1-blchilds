@@ -1,5 +1,5 @@
 ### Store Application V2.0 ###
-P1 Brandon
+
 
 ### Overview ###
 Store for making food orders online
