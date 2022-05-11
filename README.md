@@ -1,12 +1,15 @@
 ### Store Application V2.0 ###
 
-
 ### Overview ###
 Store for making food orders online
 
 ### Functionality ###
-User can signup/login, buy products and check order history
-
+User can signup
+User can login
+User can buy products
+User can check order history
+Manager can add stock
+Manager can view inventory
 Manager can add stock and view inventory
 
 ### Tech Stack ###
