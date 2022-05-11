@@ -6,6 +6,7 @@ Store for making food orders online
 ### Functionality ###
 User can signup</br>
 User can login</br>
+If the user tries to login without an account, they are prompted to sign-up</br>
 User can buy products</br>
 User can check order history</br>
 Manager can add stock</br>
