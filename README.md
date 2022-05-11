@@ -4,13 +4,13 @@
 Store for making food orders online
 
 ### Functionality ###
-User can signup
-User can login
-User can buy products
-User can check order history
-Manager can add stock
-Manager can view inventory
-Manager can add stock and view inventory
+User can signup</br>
+User can login</br>
+User can buy products</br>
+User can check order history</br>
+Manager can add stock</br>
+Manager can view inventory</br>
+Manager can add stock and view inventory</br>
 
 ### Tech Stack ###
 C#, ASP.net, Docker, Sonar Cloud, SQL Server, ADO.NET, XUNIT
